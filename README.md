@@ -32,7 +32,9 @@ Pavimentados, el motor de detección publicado por el BID, identifica nueve tipo
 4. PERSISTENCIA      PostgreSQL/PostGIS, organizada por tramo
                      y por campaña de captura (series temporales)
                           |
-5. VISUALIZACIÓN     Mapa web por tramos + capas QGIS
+5. VISUALIZACIÓN     Mapa web por tramos con filtros (tipo de falla,
+                     señalización, campaña, zona) y vista de tramos
+                     ordenados por densidad de fallas + capas QGIS
                      para el equipo técnico de obras
                           |
 6. TRANSFERENCIA     Capacitación, protocolo de captura documentado
@@ -61,11 +63,11 @@ En materia de protección de datos personales (Ley n.º 18.331 de Uruguay), las 
 
 ## Hoja de ruta
 
-| Fase | Contenido |
-|---|---|
-| Fase 1 (el piloto) | Inventario vial con IA, monitoreo continuo inicial, mapa de consulta, transferencia y capacitación |
-| Fase 2 | Índice de condición por tramo alimentado por la serie temporal; memoria visual de la red con plataforma abierta de imagen a nivel de calle y anonimización automática |
-| Fase 3 | Priorización presupuestaria abierta (metodologías públicas del Banco Mundial reimplementadas en código abierto); procesamiento embarcado en la flota completa; replicación en las demás ciudades de la coalición |
+| Fase | Contenido | Módulos abiertos de referencia |
+|---|---|---|
+| Fase 1 (el piloto) | Inventario vial con IA, monitoreo continuo inicial, mapa de consulta con filtros, transferencia y capacitación | Pavimentados (licencia abierta del BID), PostgreSQL/PostGIS, MapLibre, QGIS |
+| Fase 2 | Índice de condición por tramo alimentado por la serie temporal; memoria visual de la red con imagen a nivel de calle y anonimización automática de rostros y matrículas | Panoramax (MIT, IGN Francia + OpenStreetMap France), SGBlur (MIT), norma ASTM D6433 como referencia del índice |
+| Fase 3 | Priorización presupuestaria abierta (qué tramo intervenir primero y con qué relación costo-beneficio); telemetría y procesamiento embarcado en la flota completa; replicación en las demás ciudades de la coalición | Metodologías públicas del Banco Mundial (RONET/RED) reimplementadas en MIT, Traccar (Apache 2.0) para telemetría de flota, inferencia embarcada en hardware de bajo costo |
 
 ## Estado
 
